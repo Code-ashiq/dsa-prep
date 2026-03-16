@@ -13,6 +13,23 @@ class Solution:
             for k in range(2 * i -1):
                 print("*", end="")
             print()
+    #ALTERNATE SOLUTION
+    def pattern_9_alt(self,num):
+
+        # Upper pyramid
+        for i in range(1, num + 1):
+            spaces = num - i
+            stars = 2 * i - 1
+
+            print(" " * spaces + "*" * stars)
+
+        # Lower inverted pyramid
+        for i in range(num, 0, -1):
+            spaces = num - i
+            stars = 2 * i - 1
+
+            print(" " * spaces + "*" * stars)
 
 sol = Solution()
-sol.pattern_9(5)
+
+sol.pattern_9_alt(5)
